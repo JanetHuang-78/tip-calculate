@@ -10,5 +10,8 @@ app.use(bodyparser.urlencoded({extended: false}))
 app.use(cors());
 
 app.get('/',(req,res)=>{
-    console.log('hi')
+    res.sendFile(__dirname+'/public/index.html')
 })
+
+
+app.listen(3000)
