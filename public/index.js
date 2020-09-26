@@ -24,7 +24,6 @@ function check(){
 }
 
 
-
 function checkEmpty(){
     if(total.value=='' || service.value=='' || ppl.value==''){
         let i = document.querySelectorAll('input.mark');
@@ -50,5 +49,21 @@ calBtn.addEventListener("click", function(e){
     e.preventDefault();
     checkEmpty();
     calTip();
+})
 
+saveBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    if (tipAmt.value =='' && totalAmt.value ==''){
+        alert('Please calculate tip first');
+    }
+})
+
+reviewBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    alert(tipAmt)
+})
+
+
+updateBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
 })

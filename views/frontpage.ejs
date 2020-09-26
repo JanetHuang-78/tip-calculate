@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" type="text/css">
 </head>
 <body>
-    <form>
+    <form action="/saveData" method="POST">
         <div id="container">
             <h1>Tip Calculator:</h1>
             Time:<br>
-            <input type="date" id="date"><br><br>
+            <input type="date" id="date" name="date"><br><br>
             Restaurant?<br>
-            <input type="text" id="restaurent"><br><br>
+            <input type="text" id="restaurent" name="rest"><br><br>
             How much was your bill?<br>
-            $<input type="text" id="total" class="mark"><br><br>
+            $<input type="text" id="total" class="mark" name="bill"><br><br>
             
             How much you like it?<br>
             <select name="service" id="service" onchange="check()">
@@ -26,7 +26,7 @@
                 <option value="25">25%-awesome
                 <option value="other">other                
             </select>
-            <input type="hidden" id="otherTip" placeholder="%"><br><br> 
+            <input type="hidden" id="otherTip" placeholder="%" name="otherTip"><br><br> 
             
             How many people are shraing the bill?<br>
             <input type="text" name="ppl" id="ppl" class="mark"><br></br>  
@@ -36,14 +36,15 @@
             <hr>
         
             Tip Amount per person:<br>
-            <input type="text" id="tipAmt" class="show"><br><br>
+            <input type="text" id="tipAmt" class="show" name="tipAmt"><br><br>
             Total Amount per person:<br>
-            <input type="text" id="totalAmt" class="show"><br><br>
-            <input type="submit" value="save the data" id="save" class="btn"><br>
+            <input type="text" id="totalAmt" class="show" name="totalAmt"><br><br>            
+            <input type="submit" value="save the data" class="btn"><br>                 
             <hr>
+            
             <h3>Review the data</h3>
-            <input type="submit" value="review data" id="review" class="btn">
-            <input type="submit" value="update data" id="update" class="btn">
+            <button id="review" class="btn">review the data</button>
+            <button id="update" class="btn">update the data</button>
         </div>    
     </form>
         
